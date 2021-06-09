@@ -1,0 +1,8 @@
+        <div class="icons">
+        <i class="fab fa-discord"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+        </div>

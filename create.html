@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link id="kolory" rel="stylesheet" type="text/css" href="dark.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>	
+<link rel="icon" type="image/png" href="/images/favicon.png"/>
+<script src="https://kit.fontawesome.com/8c4a46e33e.js" crossorigin="anonymous"></script>
+    <script>
+              var setTheme = localStorage.getItem('theme')
+
+if(setTheme == null){
+    document.getElementById('kolory').href = 'light.css'
+}else
+{
+    document.getElementById('kolory').href = setTheme
+    if (setTheme == 'dark.css')
+    $(document).ready(function()
+    {
+    $('#thememode').prop('checked', true);
+    });
+}
+
+function swapStyle(){
+    var x = document.getElementById("thememode").checked
+    if(x === true){
+        document.getElementById('kolory').href = 'dark.css'
+        localStorage.setItem('theme', 'dark.css')
+    }else{
+        document.getElementById('kolory').href = 'light.css'
+        localStorage.setItem('theme', 'light.css')
+    }
+}
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html"><img src="images/logo.png" style="height: 65px; margin-left: 20px; margin-top: 5px;"></a>
+        <input type="checkbox" id="thememode" onclick="swapStyle()"/>
+        <ul id="menuList">
+            <a href=teams.html><li>Drużyny</li></a>
+            <a href=touraments.html><li>Turnieje</li></a>
+            <a href=contact.html><li>Kontakt</li></a>
+            <a href=create.html><li>Wykonanie strony</li></a>
+        </ul>
+    </div>
+    <div class="container">
+      <div class="w3-light-grey w3-round-xlarge" style="width: 80vw; margin-left: 10vw; margin-top: 3vh;">
+        <div class="w3-container w3-blue w3-round-xlarge" style="width:47%">47%</div>
+      </div>
+      <h2 id="dev">DevLog:</h2>
+      </br>
+      <p id="logs">1.Podstawowy wygląd strony został zrealizowany. Teksty są pisane, zdjęcia prawie wszystkie wybrane.<br/><br/>
+        2. Został dodany tryb ciemny który można zmienić checkboxem kolo loga! (w przyszłości zmienimy jego położenie oraz wygląd)<br>
+        teksty są nadal pisane. praca powoli idzie do przodu! Została ukończona zakładka kontakt!
+      </p>
+      </div>
+</body>
+</html>
