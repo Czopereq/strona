@@ -23,6 +23,14 @@ $("#top-image").mousemove(function(e){
 });
 });
 
+        function navBarOpen(){
+            if(document.getElementById(".myLinks").style.display == "none"){
+                document.getElementById(".myLinks").style.display == "block"
+            }else{
+                document.getElementById(".myLinks").style.display == "none"
+            }
+        }
+
         var setTheme = localStorage.getItem('theme')
 
         if(setTheme == null){
@@ -47,6 +55,7 @@ $("#top-image").mousemove(function(e){
                 localStorage.setItem('theme', 'light.css')
             }
         }
+
     </script>
 </head>
 <body>
@@ -66,31 +75,17 @@ $("#top-image").mousemove(function(e){
         
         </div>
         </br>
-        <p id="t1"><img class="main" src="/images/fot1.png"/><br/>
-            Strona na, której właśnie się znalazłeś w skrócie 
-            lub nie opisze Tobie profesjonalne drużyny z gry 
-            Counter Strike : Global Offensive. Może pierw coś
-             o samej grze. Gra CS:GO jest typowym FPS'em w 
-             której ścierają się 2 drużyny składających się z 
-             5 graczy. Celem samej rozgrywki jest zdobycie 16 
-             rund aby wygrać mecz turniejowy. Mecze turniejowe 
-             wymagają od graczy pełnego skupienia oraz zgrania. 
-             Gra jest grą drużynową więc zgranie oraz dobra 
-             komunikacja to podstawa. Postaramy wam się 
-             przedstawić drużyny, które odznaczyły się w 
-             historii CS'a.</p>
-             <img class="main" src="/images/fot2.png"/>
-             <p id="t2">Wszystkie informacje możesz zobaczyć w 
-            zakładkach w prawym górnym rogu. Możesz 
-            znaleźć tam informacje dotyczące Drużyn 
-            oraz Turnieji, które są znane na całym 
-            świecie. W razie jakichkolwiek pytań możesz 
-            wysłać nam wiadomość w zakładce kontakt.
-             Dziękujemy za odwiedzenie naszej strony, 
-             mamy nadzieje że wyciągnąłeś dużo przydatnych 
-             informacji apropos świata profesjonalnych 
-             drużyn CS'a oraz turnieji które się odbywają.</p>
-            </div>
+        <div clas="uklad">
+            <div class="uklad2"><img class="glownapht" src="/images/fot1.png" /></div>
+            <div class="uklad2">Strona na, której właśnie się znalazłeś w skrócie 
+                lub nie opisze Tobie profesjonalne drużyny z gry 
+                Counter Strike : Global Offensive. Może pierw coś
+                 o samej grze. Gra CS:GO jest typowym FPS'em w 
+                 której ścierają się 2 drużyny składających się z 
+                 5 graczy. Celem samej rozgrywki jest zdobycie 16 
+                 rund aby wygrać mecz turniejowy. Mecze turniejowe 
+                 wymagają od graczy pełnego skupienia oraz zgrania.</div></br></br>
+            <img class="glownapht" src="images/fot2.png"></div>
     </div>
 </body>
 </html>

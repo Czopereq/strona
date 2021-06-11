@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link id="kolory" rel="stylesheet" type="text/css" href="dark.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>	
+<link rel="icon" type="image/png" href="/images/favicon.png"/>
+<script src="https://kit.fontawesome.com/8c4a46e33e.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+var movementStrength = 25;
+var height = movementStrength / $(window).height();
+var width = movementStrength / $(window).width();
+$("#top-image").mousemove(function(e){
+          var pageX = e.pageX - ($(window).width() / 2);
+          var pageY = e.pageY - ($(window).height() / 2);
+          var newvalueX = width * pageX * -1 - 25;
+          var newvalueY = height * pageY * -1 - 50;
+          $('#top-image').css("background-position", newvalueX+"px     "+newvalueY+"px");
+});
+});
+
+        var setTheme = localStorage.getItem('theme')
+
+        if(setTheme == null){
+            document.getElementById('kolory').href = 'light.css'
+        }else
+        {
+            document.getElementById('kolory').href = setTheme
+            if (setTheme == 'dark.css')
+            $(document).ready(function()
+            {
+            $('#thememode').prop('checked', true);
+            });
+        }
+
+        function swapStyle(){
+            var x = document.getElementById("thememode").checked
+            if(x === true){
+                document.getElementById('kolory').href = 'dark.css'
+                localStorage.setItem('theme', 'dark.css')
+            }else{
+                document.getElementById('kolory').href = 'light.css'
+                localStorage.setItem('theme', 'light.css')
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <a href="../index.html"><img src="../images/logo.png" style="height: 65px; margin-left: 20px; margin-top: 5px;"></a>
+        <input type="checkbox" id="thememode" onClick="swapStyle()" />
+        <ul id="myLinks">
+            <a href="../teams.html"><li>Drużyny</li></a>
+            <a href="../touraments.html"><li>Turnieje</li></a>
+            <a href="../contact.html"><li>Kontakt</li></a>
+            <a href="../create.html"><li>Wykonanie strony</li></a>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="teambg vp"><h1>Virtus.Pro</h1>
+            <img alt="Image of CS:GO player Snax" class="bodyshot-img" title="Janusz 'Snax' Pogorzelski" itemprop="image" src="https://img-cdn.hltv.org/playerbodyshot/4bDuOXavzW9klaOMhmkD6G.png?ixlib=java-2.1.0&amp;w=400&amp;s=08e81c226c1947f21a1acd8a430630cc">
+            <img alt="Image of CS:GO player pashaBiceps" class="bodyshot-img" title="Jarosław 'pashaBiceps' Jarząbkowski" itemprop="image" src="https://img-cdn.hltv.org/playerbodyshot/2IRJdkkn4wQxpZT2ohADFQ.png?ixlib=java-2.1.0&amp;w=400&amp;s=b3093b50705aa5654549f9a4c7e82bfe">
+            <img alt="Image of CS:GO player pashaBiceps" class="bodyshot-img" title="Jarosław 'pashaBiceps' Jarząbkowski" itemprop="image" src="https://img-cdn.hltv.org/playerbodyshot/2IRJdkkn4wQxpZT2ohADFQ.png?ixlib=java-2.1.0&amp;w=400&amp;s=b3093b50705aa5654549f9a4c7e82bfe">
+            <img alt="Image of CS:GO player NEO" class="bodyshot-img" title="Filip 'NEO' Kubski" itemprop="image" src="https://img-cdn.hltv.org/playerbodyshot/B8VBBLDj2U1k6qcYDrjZ9p.png?ixlib=java-2.1.0&amp;w=400&amp;s=e8fec98d002f37e9908aa0291824d191">
+            <img alt="Image of CS:GO player TaZ" class="bodyshot-img" title="Wiktor 'TaZ' Wojtas" itemprop="image" src="https://img-cdn.hltv.org/playerbodyshot/Z12EAO5neY4gT3PewCdNIz.png?ixlib=java-2.1.0&amp;w=400&amp;s=ac7c223f3951de70c99d23e99c15519b">
+            <img src="../images/teams/virtuspro.png" class="teamlogo">    
+        </div>
+    </div>
+</body>
+</html>

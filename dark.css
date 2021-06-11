@@ -27,6 +27,14 @@ i{
     margin-right: 15px;
     margin-top: 30px;
 }
+ul a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+ul li{
+    margin-top: 5px;
+}
 
 .nav ul li{
     display: inline-block;
@@ -90,18 +98,6 @@ i{
     font-size: 1vw;
     margin-top: 5vw;
 }
-
-.content img.main1{
-    height: 15vw;
-    width: 30vw;
-    padding: 1vw;
-}
-
-.content img.main2{
-    height: 15vw;
-    width: 30vw;
-    padding: 1vw;
-}
 .fa-discord, .fa-facebook-f, .fa-twitter, .fa-youtube{
     transition: color 0.2s ease-in-out;
 }
@@ -124,13 +120,13 @@ i{
 @media (max-width:1400px){
     .content p#t1{
         font-size: 2vw;
-        color: black;
+        color: white;
         margin-top: 1vh;
     }
     
     .content p#t2{
         font-size: 2vw;
-        color: black;
+        color: white;
         margin-top: 5vw;
     }
     
@@ -144,13 +140,13 @@ i{
 @media (max-width:900px){
     .content p#t1{
         font-size: 2vw;
-        color: black;
+        color: white;
         margin-top: 1vh;
     }
     
     .content p#t2{
         font-size: 2vw;
-        color: black;
+        color: white;
         margin-top: 5vw;
     }
     
@@ -173,18 +169,15 @@ i{
         font-size: 5vw;
         display: none;
         }
-    .myLinks{
-        display: none;
-    }
         .content p#t1{
             font-size: 3vw;
-            color: black;
+            color: white;
             margin-top: 1vh;
         }
         
         .content p#t2{
             font-size: 3vw;
-            color: black;
+            color: white;
             margin-top: 5vw;
         }
         
@@ -202,6 +195,14 @@ i{
     text-align: center;
 }
 
-.w3-light-grey{
-    background-color: lightgray;
+.uklad{
+    float: left;
+}
+.glownapht{
+    height: 400px;
+    margin-bottom: 5vw;
+    margin-left: 2vw;
+}
+h3{
+    margin-left: 30px;
 }
